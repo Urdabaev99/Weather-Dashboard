@@ -1,0 +1,116 @@
+.dataVisualization {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-color);
+    padding: 0px 20px;
+}
+
+.statsSummary {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+
+    &__item {
+        flex: 1;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &__label {
+        font-size: var(--font-m);
+        color: var(--text-color);
+    }
+
+    &__value {
+        font-size: var(--font-xl);
+        font-weight: bold;
+        margin-top: 8px;
+        color: var(--accent-color);
+    }
+}
+
+.dailyAverages {
+    overflow-x: auto;
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: var(--font-l);
+        font-weight: 500;
+        color: var(--text-color);
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: var(--font-s);
+    }
+
+    &__table th,
+    &__table td {
+        border: 1px solid var(--border);
+        padding: 8px;
+    }
+
+    &__table th {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        text-align: left;
+    }
+}
+
+.chartContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__title {
+        font-size: var(--font-l);
+        font-weight: 500;
+        color: var(--text-color);
+    }
+}
+
+.chartContainer .chartSvg {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: visible;
+    height: 300px;
+    @media (max-width: 768px) {
+        height: 200px;
+    }
+    @media (max-width: 479px) {
+        height: 150px;
+    }
+}
+
+.axisLine {
+    stroke: var(--text-color);
+    stroke-width: 1;
+}
+
+.axisLabel {
+    font-size: var(--font-s);
+    fill: var(--text-color);
+}
+
+.axisTick {
+    stroke: var(--text-color);
+    stroke-width: 1;
+}
+
+.linePath {
+    fill: none;
+}
+
+.xAxisLabels {
+    fill: none;
+}
+
+.yAxisLabels {
+    fill: none;
+}

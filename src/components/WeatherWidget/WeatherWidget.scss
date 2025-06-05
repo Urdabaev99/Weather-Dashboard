@@ -1,0 +1,60 @@
+.settingPanel__animation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.settingPanel__animation-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.settingPanel__animation-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        opacity 300ms ease,
+        transform 300ms ease;
+}
+
+.settingPanel__animation-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+.settingPanel__animation-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition:
+        opacity 300ms ease,
+        transform 300ms ease;
+}
+
+.weatherWidget__content {
+    position: relative;
+}
+
+.tab-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+.tab-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 300ms ease-out,
+        transform 300ms ease-out;
+}
+
+.tab-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tab-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+        opacity 300ms ease-in,
+        transform 300ms ease-in;
+}

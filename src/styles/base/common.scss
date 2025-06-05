@@ -1,0 +1,30 @@
+html,
+body {
+    height: auto;
+    position: relative;
+    background-color: var(--bg-color);
+    font-size: 18px;
+    font-family: var(--font-family-main);
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    width: 100vw;
+    &.no-scroll {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+._container {
+    padding: 0 14rem;
+    margin: 0 auto;
+    width: 100%;
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+}

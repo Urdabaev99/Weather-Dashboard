@@ -1,0 +1,39 @@
+:root {
+    --font-family-main: "Montserrat", sans-serif;
+    --font-s: 14px;
+    --font-m: 16px;
+    --font-l: 20px;
+    --font-xl: 40px;
+    --font-xxl: 64px;
+    @media (max-width: 478px) {
+        --font-s: 10px;
+        --font-m: 12px;
+        --font-l: 15px;
+        --font-xl: 20px;
+        --font-xxl: 32px;
+    }
+}
+
+body {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --text-color-hover: #f8f9fa;
+    --invert-text-color: #f8f9fa;
+    --acent-color: #0d6efd;
+    --acent-color-hover: rgba(13, 110, 253, 0.8);
+    --acent-color-opacity: rgba(13, 110, 253, 0.3);
+    --border: #ccc;
+    --gradient-end: #0984e3;
+}
+
+.darkMode {
+    --bg-color: #212529;
+    --text-color: #f8f9fa;
+    --text-color-hover: #212529;
+    --invert-color: #212529;
+    --acent-color: #0d6efd;
+    --acent-color-hover: rgba(13, 110, 253, 0.8);
+    --acent-color-opacity: rgba(13, 110, 253, 0.3);
+    --border: #ccc;
+    --gradient-end: #0984e3;
+}

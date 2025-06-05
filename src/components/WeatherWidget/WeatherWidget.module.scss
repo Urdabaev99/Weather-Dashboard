@@ -1,0 +1,106 @@
+.weatherWidget {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    min-height: 490px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    padding: 20px 0px;
+    &.darkMode {
+        background: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    &__header {
+        position: relative;
+        z-index: 99;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+        gap: 10px;
+        @media (max-width: 369px) {
+            gap: 5px;
+        }
+    }
+    &__headerActions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 369px) {
+            gap: 5px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 10px;
+        position: relative;
+        padding: 0px 20px;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--border);
+            z-index: 1;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+    }
+    &__tab {
+        font-size: var(--font-m);
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        padding: 18px 25px;
+        background: none;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        transition: 0.3s;
+        border-radius: 10px 10px 0px 0px;
+        color: var(--text-color);
+        @media (max-width: 768px) {
+            padding: 10px 10px;
+        }
+        &.active {
+            background-color: var(--acent-color-opacity);
+            color: var(--acent-color);
+            &:after {
+                opacity: 1;
+            }
+        }
+        &:hover {
+            color: var(--acent-color-hover);
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(
+                90deg,
+                var(--acent-color),
+                var(--gradient-end)
+            );
+            border-radius: 3px 3px 0px 0px;
+            opacity: 0;
+        }
+    }
+}

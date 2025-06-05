@@ -1,0 +1,41 @@
+.forecastList {
+    position: relative;
+    &__title {
+        font-size: var(--font-xl);
+        font-weight: 600;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    &__item {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 10px;
+        width: 140px;
+        text-align: center;
+    }
+    &__date {
+        font-size: var(--font-m);
+        margin-bottom: 5px;
+    }
+    &__temp {
+        font-size: var(--font-m);
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    &__desc {
+        font-size: var(--font-s);
+        margin-bottom: 5px;
+    }
+    &__icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+}
